@@ -12,7 +12,7 @@
 	<artifactId>bootjpaexample</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>bootjpaexample</name>
-	<description>this is a projext just for learning jpa</description>
+	<description>this is a project just for learning jpa</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

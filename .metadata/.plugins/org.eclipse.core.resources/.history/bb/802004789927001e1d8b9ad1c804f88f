@@ -1,2 +1,0 @@
-spring.datasource.name=test
-spring.datasource.url=jdbc:mysql//localhost
