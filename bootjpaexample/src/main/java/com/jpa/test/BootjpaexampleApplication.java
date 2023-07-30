@@ -18,12 +18,13 @@ public class BootjpaexampleApplication {
 
 	 ApplicationContext context =SpringApplication.run(BootjpaexampleApplication.class, args);
 	 UserRepository userRepository =context.getBean(UserRepository.class);
-	 User user = new User();
-	 user.setName("Ankit Pal");
-	 user.setCity("Lucknow");
-
-	User user1 = userRepository.save(user);
-	System.out.println(user1);
+//
+//	 User user = new User();
+//	 user.setName("Ankit Pal");
+//	 user.setCity("Lucknow");
+//
+//	User user1 = userRepository.save(user);
+//	System.out.println(user1);
 
 	//Create object of user
 //	 User user1 = new User();
@@ -97,6 +98,10 @@ public class BootjpaexampleApplication {
 //		allusers.forEach(user -> System.out.println(user));
 //
 //		userRepository.deleteAll(allusers);
+
+		//derived query method uses
+	 List<User> users =	userRepository.findByNameAndCity("Ankit Pal","Lucknow");
+	 users.forEach(e -> System.out.println(e) );
 
 
 
