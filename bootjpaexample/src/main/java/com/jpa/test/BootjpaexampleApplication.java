@@ -6,6 +6,7 @@ import org.springframework.context.ApplicationContext;
 
 import com.jpa.test.dao.UserRepository;
 import com.jpa.test.entities.User;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import java.util.List;
 import java.util.Optional;
@@ -100,12 +101,18 @@ public class BootjpaexampleApplication {
 //		userRepository.deleteAll(allusers);
 
 		//derived query method uses
-	 List<User> users =	userRepository.findByNameAndCity("Ankit Pal","Lucknow");
-	 users.forEach(e -> System.out.println(e) );
+//	 List<User> users =	userRepository.findByNameAndCity("Ankit Pal","Lucknow");
+//	 users.forEach(e -> System.out.println(e) );
 
+    List<User> allUser = userRepository.getAllUser();
+	 allUser.forEach(e-> {
+		 System.out.println(e);
+	 });
 
-
-
+   List<User> userByName = userRepository.getUserByName("Ankit Pal");
+   userByName.forEach(e->{
+	   System.out.println(e);
+   });
 
 
 	}
