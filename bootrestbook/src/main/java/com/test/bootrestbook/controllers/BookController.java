@@ -13,18 +13,22 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
+    //get all book handler
    @GetMapping("/books")
     public List<Book> getBooks(){
 
         return this.bookService.getAllBook();
     }
 
+
+    //get single book handler
     @GetMapping("/books/{id}")
     public Book getBook(@PathVariable("id") int id){
 
        return bookService.getBookById(id);
     }
 
+    //add new book handler
     @PostMapping("/books")
     public Book addBook(@RequestBody Book book)
     {
@@ -32,5 +36,16 @@ public class BookController {
         System.out.println(b);
         return b;
     }
+
+    //delete book handler
+
+    @DeleteMapping("/books/{bookId}")
+    public void deleteBook(@PathVariable ("bookId") int bookId)
+    {
+       this.bookService.deleteBook(bookId);
+
+    }
+
+
 
 }
