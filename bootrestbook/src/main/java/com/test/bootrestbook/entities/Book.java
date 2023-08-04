@@ -12,7 +12,7 @@ public class Book {
     private int id;
     private String title;
 
-    @OneToOne(cascade = CascadeType.ALL)
+   @OneToOne(cascade = CascadeType.ALL)
     private  Author author;
 
     public Book(int id, String title, Author author) {

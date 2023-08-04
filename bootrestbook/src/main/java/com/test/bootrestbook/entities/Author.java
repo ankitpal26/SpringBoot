@@ -12,6 +12,16 @@ public class Author {
     private String firstName;
     private String language;
 
+    @OneToOne(mappedBy = "b")
+    private Book book;
+
+    public Book getBook() {
+        return book;
+    }
+
+    public void setBook(Book book) {
+        this.book = book;
+    }
 
     public int getAuthorId() {
         return authorId;
