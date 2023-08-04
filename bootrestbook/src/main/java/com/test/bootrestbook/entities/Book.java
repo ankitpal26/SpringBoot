@@ -1,7 +1,8 @@
 package com.test.bootrestbook.entities;
 
-import jakarta.persistence.*;
-import org.hibernate.dialect.MySQL57Dialect;
+
+
+import javax.persistence.*;
 
 
 @Entity
@@ -10,7 +11,7 @@ public class Book {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "book_id")
     private int id;
     private String title;
