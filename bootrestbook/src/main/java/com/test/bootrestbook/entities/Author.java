@@ -12,7 +12,7 @@ public class Author {
     private String firstName;
     private String language;
 
-    @OneToOne(mappedBy = "b")
+    @OneToOne
     private Book book;
 
     public Book getBook() {
