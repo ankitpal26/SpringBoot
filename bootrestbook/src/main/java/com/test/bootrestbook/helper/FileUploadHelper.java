@@ -1,12 +1,10 @@
 package com.test.bootrestbook.helper;
 
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.InputStream;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
@@ -14,7 +12,13 @@ import java.nio.file.StandardCopyOption;
 @Component
 public class FileUploadHelper {
 
-    public final  String UPLOAD_DIR="C:\\One Drive\\OneDrive\\Desktop\\Spring Boot\\bootrestbook\\src\\main\\resources\\static\\image";
+//    public final  String UPLOAD_DIR="C:\\One Drive\\OneDrive\\Desktop\\Spring Boot\\bootrestbook\\src\\main\\resources\\static\\image";
+
+    public final String UPLOAD_DIR=new ClassPathResource("static/image/").getFile().getAbsolutePath();
+    public FileUploadHelper() throws IOException
+    {
+
+    }
 
     public boolean uploadFile(MultipartFile multipart)
     {
