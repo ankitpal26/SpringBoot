@@ -1,6 +1,5 @@
 package com.practice.thymeleafPractical.controllers;
-
-import org.springframework.http.HttpMethod;
+ 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +19,12 @@ public class MyController {
         model.addAttribute("name","Ankit Pal");
 
         model.addAttribute("currentDate",new Date().toLocaleString());
+
+        //example
+        String nameString="abc";
+        nameString.toUpperCase();
+
+
         return "about";
         //about.html
     }

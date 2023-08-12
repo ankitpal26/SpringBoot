@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
@@ -8,8 +8,17 @@
 
 <h1>About learn With Durgesh</h1>
 <h1>We are learning spring boot thymeleaf</h1>
-<h1> th:</h1>
 
- <h2>Name of the Owner is </h2>
+<!--<h1 th:text="${ #string.toUpperCase(name) }"></h1>-->
+
+<h1 th:text="${name}"></h1>
+<h2 th:text="${currentDate}"></h2>
+
+ <h2>Name of the Owner is <span th:text="${name}"></span></h2>
+
+<div >
+
+
+</div>
 </body>
 </html>
